@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregable 4 Interfaces</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <audio id="sonidoCorrer" src="sonidos/sonidoCorrer.wav" preload="auto"></audio>
+
+  <div>
+        <div id="cartel" class="cartel oculto">
+  <h2>👋 ¡Bienvenido al juego del Niño Explorador!</h2>
+  <p>
+    Eres un valiente niño explorador que se aventura en el bosque en busca de tesoros y aventuras.  
+    Ten cuidado con los enemigos que acechan y usa los objetos para ayudarte en tu camino.
+  </p>
+  <p>🕹️ <strong>Controles del juego:</strong></p>
+  <ul>
+    <li>⬆️ Botón flecha arriba para <strong>saltar</strong></li>
+    <li>⬇️ Botón flecha abajo para <strong>agacharse</strong></li>
+    <li>⏸️ Botón para <strong>pausar / reanudar</strong> el juego</li>
+    <li>🔄 Botón para <strong>reiniciar</strong> el juego desde el inicio</li>
+    <li>🎮 Botón para <strong>volver a jugar</strong> después de perder</li>
+  </ul>
+  <p>🧰 <strong>Objetos que puedes agarrar:</strong></p>
+  <ul>
+    <li>🔭 <strong>Binoculares</strong> - para ver más lejos</li>
+    <li>🗺️ <strong>Mapa</strong> - para no perderte en el bosque</li>
+    <li>🔥 <strong>Antorcha</strong> - para iluminar lugares oscuros</li>
+    <li>❤️ <strong>Vidas extras</strong> - para aguantar más golpes</li>
+  </ul>
+  <p>👾 <strong>Enemigos a evitar:</strong></p>
+  <ul>
+    <li>🦊 <strong>Zorro</strong> - astuto y rápido</li>
+    <li>🦉 <strong>Búho</strong> - vigilante desde las alturas</li>
+  </ul>
+  <p>Diviértete explorando, recogiendo objetos y esquivando enemigos. ¡Buena suerte!</p>
+  <button id="botonCerrar">Entendido</button>
+</div>
+  </div>
+
+  <div id="iniciarJuego">
+    <img src="imagenes/portadaJuego.png" alt="Inicia Juego">
+    <button id="btnIniciar">COMENZAR</button>
+    <button class="botonInfo">Info</button>
+  </div>
+
+  <div id="pantallaGameOver">
+     <img src="imagenes/finDeJuego.png" alt="Game Over">
+     <button id="jugarNuevamente">Jugar de Nuevo</button>
+    
+     
+  </div>
+
+  <div id="juego" style="display: none">
+
+  <div id="panelJugador">
+    <div class="panelJugador">
+      <div id="vidas">Vidas: ❤️ ❤️ ❤️</div>
+      <div id="puntaje">Puntaje: 0</div>
+    </div>
+    <div class="panelJugador">
+      <div id="tiempo">Tiempo: <span id="tiempoRestante">120</span>s</div>
+    </div>
+    <div class="panelJugador">
+       <div id="botones">
+        <button class="botonInfo">Info</button>
+        <button id="pausar">⏸ Pausar</button>
+        <button id="reiniciar">🔄 Reiniciar</button>
+      </div>
+    </div> 
+  </div> 
+     
+    
+    <div id="contenedor">
+      <div id="parallax">
+            <div class="layer layer1"></div>
+            <div class="layer layer2"></div>
+            <div class="layer layer3"></div>
+            <div class="layer layer4"></div>
+            <div class="layer layer5"></div>
+            <div class="layer layer6"></div>
+            <div class="layer layer7"></div>
+            <div class="layer layer8"></div>
+            <div class="layer layer9"></div>
+      </div>
+
+      <div id="personaje" class="correr"></div>
+      <div id="contenedorElemento"></div>
+ 
+    </div>
+  </div>
+    
+    <script src="js/Personaje.js"></script>
+    <script src="js/Enemy.js"></script>
+    <script src="js/Runner.js"></script>
+    <script src="js/Elemento.js"></script>
+    <script src="js/Js.js"></script>
+    
+ 
+</body>
+</html>
