@@ -201,7 +201,7 @@ body {
 }
 
 /* Estilo de imágenes dentro de pantallas */
-#iniciarJuego img, #pantallaGameOver img {
+#iniciarJuego img, #pantallaGameOver img, #pantallaFin img {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
@@ -218,9 +218,33 @@ body {
     background: rgba(0,0,0,0.8);
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 9998;
 }
-
+#pantallaFin {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#imagenFin {
+  max-width: 80%;
+}
+#puntajeFinal {
+  font-size: 24px;
+  color: white;
+  margin-top: 10px;
+}
+button {
+ 
+  padding: 5px 20px;
+  font-size: 18px;
+}
 /* Ocultar elemento */
 .oculto {
     display: none;

@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-  <audio id="sonidoCorrer" src="sonidos/sonidoCorrer.wav" preload="auto"></audio>
-
   <div>
         <div id="cartel" class="cartel oculto">
   <h2>👋 ¡Bienvenido al juego del Niño Explorador!</h2>
@@ -49,9 +47,13 @@
 
   <div id="pantallaGameOver">
      <img src="imagenes/finDeJuego.png" alt="Game Over">
-     <button id="jugarNuevamente">Jugar de Nuevo</button>
-    
-     
+     <button id="jugarNuevamente">Jugar de Nuevo</button>  
+  </div>
+
+  <div id="pantallaFin" style="display:none;">
+    <img src="imagenes/terminoLaPartida.png" alt="Fin del juego" id="imagenFin">
+    <div id="puntajeFinal">Puntos obtenidos: 0</div>
+    <button id="reiniciarJuego">Reintentar</button>
   </div>
 
   <div id="juego" style="display: none">

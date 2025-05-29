@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pausar();
   });
 
+document.querySelector("#reiniciarJuego").addEventListener("click", reiniciarJuego);
   // Abrir cartel de información si se hace clic en un botón con clase .botonInfo
   document.addEventListener('click', (event) => {
     if (event.target.classList.contains('botonInfo')) {
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tiempoElemento.textContent = tiempo;
 
     if (tiempo <= 0) {
-      clearInterval(intervaloTiempo);
+     
       terminarJuego();
     }
   }, 1000);
@@ -90,6 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  function reiniciarJuego() {
+  document.getElementById("pantallaFin").style.display = "none";
+  reiniciar();
+  juegoPausado=true;
+  pausar();
+  // Mostrar pantalla de juego si está oculta
+  document.getElementById("juego").style.display = "block";
+}
+
+
+  function mostrarPantallaFin(puntaje) {
+   document.getElementById("pantallaFin").style.display = "flex";
+   document.getElementById("puntajeFinal").textContent = "Puntos obtenidos: " + puntaje;
+  }
+
   // Reinicia todos los intervalos y valores
   function iniciarJuego() {
     intervaloJuego = setInterval(gameLoop, 50);
@@ -100,6 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Termina el juego
   function terminarJuego() {
     pausar(); // solo pausa, se muestra pantalla de Game Over desde gameLoop
+   /*NUEVO */ mostrarPantallaFin(puntaje);
+   /*NUEVO */ clearInterval(intervaloTiempo);
   }
 
   // Reinicia variables y elementos del juego
@@ -265,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
         imagen: "imagenes/zorro.png",
         imagenHit: "imagenes/zorroGolpeado.png",
         desdeY: 100,
-        velocidad: 15
+        velocidad: 10
       });
     } else {
       enemigo = new Enemy({
