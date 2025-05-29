@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
     pausar();
   });
 
-document.querySelector("#reiniciarJuego").addEventListener("click", reiniciarJuego);
+ document.querySelector("#reiniciarJuego").addEventListener("click", reiniciarJuego);
   // Abrir cartel de información si se hace clic en un botón con clase .botonInfo
-  document.addEventListener('click', (event) => {
+   document.addEventListener('click', (event) => {
     if (event.target.classList.contains('botonInfo')) {
       abrirCartel();
       pausar();
