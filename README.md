@@ -120,3 +120,17 @@ little-explorer/
     ├── cantimplora.png
     ├── corazon.png
     └── nature_1/
+
+🎯 Objetivo del proyecto
+
+El objetivo del proyecto fue desarrollar un videojuego interactivo utilizando tecnologías web, aplicando conceptos de programación orientada a objetos, manipulación del DOM, eventos, animaciones, detección de colisiones y gestión de estados.
+
+👩‍💻 Autora
+
+Micaela Lopez
+
+Desarrolladora de Aplicaciones Informáticas.
+
+Tecnologías
+
+HTML CSS JavaScript
